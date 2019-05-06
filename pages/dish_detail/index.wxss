@@ -1,0 +1,146 @@
+/* pages/new_course/index.wxss */
+page{
+  background: #e8e8e8e8;
+}
+.second-tab {
+  display: flex;
+  flex-direction: row;
+  height: 2em;
+  box-shadow: 0px 0px 3px #e8e8e8;
+  background: #ffffff;
+}
+.second-tab > view{
+  width: 50%;
+  text-align: center;
+  line-height: 2.3em;
+}
+.second-tab > view.active{
+   border-bottom: 3px solid #ffc12b;
+}
+/**/
+.head-img{
+  width:100%;
+}
+/**/
+.price{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  background: #ffffff;
+  border: 1px solid #d1d1d1;
+  margin: 0 auto;
+  transform: translateY(-30px);
+}
+.price text{
+  font-size: 1em;
+  padding: 0.3em 0 0 0;
+  color: #12da5ee8;
+}
+.price .act-btn{
+  display: flex;
+}
+.price .act-btn image{
+  position: relative;
+  width: 1em;
+  height: 1em;
+}
+.price .act-btn .share{
+  position: relative;
+  font-size: 0.7em;
+  padding-bottom: 1em;
+}
+/**/
+.dish-description{
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+}
+.dish-description .title{
+  font-size: 0.9em;
+  padding: 0 0 0 1em;
+}
+.dish-description .description{
+    font-size: 0.7em;
+    color: #e2b856;
+} 
+/**/
+.restaurant{
+  height: 1.5em;
+  overflow:hidden;
+  margin: 0 auto;
+  margin-top:0.5em;
+  padding-bottom: 0.8em;
+  background: #ffffff;
+  box-shadow: 2px 5px 50px #d1d1d1;
+}
+.restaurant .pos{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 0.3em 1em 0 1em;
+}
+.restaurant .pos text{
+  font-size: 0.9em;
+}
+/**/
+.foot{
+  height: 1.25em;
+  overflow:hidden;
+  margin: 0 auto;
+  margin-top:0.5em;
+  padding-bottom: 0.8em;
+  background: #ffffff;
+  box-shadow: 2px 5px 50px #d1d1d1;
+}
+/*菜品详情页的脚页*/
+.dish-detail-footer{
+  height: 2em;
+  border-top: 1px solid #e8e8e8;
+  width: 100%;
+  position: fixed;
+  z-index: 999;
+  bottom: 0;
+  left: 0;
+  background: #fff;
+}
+.dish-detail-footer .btn{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.dish-detail-footer .btn .business{
+  display: flex;
+  flex-direction: column;
+  padding: 0.3em 0 0 1em;
+}
+.dish-detail-footer .btn .business image{
+    width: 1em;
+    height: 1em;
+}
+.dish-detail-footer .btn .business text{
+  font-size: 0.4em;
+  text-align: center;
+}
+.dish-detail-footer .btn .reserve{
+  width: 100px;
+  height: 30px;
+  border-radius: 20px;
+  background: #e2b856;
+  font-size: 1em;
+  color: #ffffff;
+  text-align: center;
+}
+.dish-detail-footer .btn .collection{
+  display: flex;
+  flex-direction: column;
+  padding: 0.3em 1em 0 0;
+}
+.dish-detail-footer .btn .collection image{
+    width: 1em;
+    height: 1em;
+}
+.dish-detail-footer .btn .collection text{
+  font-size: 0.4em;
+  text-align: center;
+}

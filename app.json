@@ -1,0 +1,42 @@
+{
+  "pages": [
+    "pages/recommendation/index",
+    "pages/dish-atlas/dish-atlas",
+    "pages/personal/personal",
+    "pages/logs/logs",
+    "pages/dish_detail/index",
+    "pages/course_detail/index",
+    "pages/recommendation/see-all/see-all",
+    "pages/login/login",
+    "pages/register/register"
+  ],
+  "window": {
+    "navigationStyle": "custom"
+  },
+  "tabBar": {
+    "color": "#888",
+    "selectedColor": "#09bb07",
+    "backgroundColor": "#000",
+    "list": [
+      {
+        "pagePath": "pages/recommendation/index",
+        "text": "推荐",
+        "iconPath": "img/推荐.png",
+        "selectedIconPath": "img/推荐.png"
+      },
+      {
+        "pagePath": "pages/dish-atlas/dish-atlas",
+        "text": "图栏",
+        "iconPath": "img/图鉴.png",
+        "selectedIconPath": "img/图鉴.png"
+      },
+      {
+        "pagePath": "pages/personal/personal",
+        "text": "我的",
+        "iconPath": "img/用户.png",
+        "selectedIconPath": "img/用户.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

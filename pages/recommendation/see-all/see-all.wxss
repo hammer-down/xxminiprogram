@@ -1,0 +1,2 @@
+/* pages/recommendation/see-all/see-all.wxss */
+@import "see-grid-template/see-grid-template.wxss";

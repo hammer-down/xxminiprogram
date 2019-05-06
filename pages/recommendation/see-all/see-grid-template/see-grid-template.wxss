@@ -1,0 +1,8 @@
+@import "../../dish-template/dish-template.wxss";
+.grid-container{
+  margin: 2em 0em 2em 0.5em;
+}
+.single-dish-container{
+  float: left;
+  margin-bottom: 2em;
+}

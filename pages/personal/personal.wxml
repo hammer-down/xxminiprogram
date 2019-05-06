@@ -1,0 +1,42 @@
+<!--pages/personal/personal.wxml-->
+<view class="placeholder"></view>
+
+<view class="container">
+
+  <view class="page_title">
+    <image class='logo' src='/img/logo.png'></image>
+    <text class="title">小巷</text>
+  </view>
+  <view class='personal'>
+    <image bindtap="" class="personal_img" src="/img/头像.jpg"></image>
+    <view class='summary'>
+      <view class='name'>
+        <text>昵称</text>
+      </view>
+      <view class="state" bindtap='logintap'>
+        <text>未登陆</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="myCollection">
+
+    <view class='collection_name'>
+      <image class="collection_picture" src='/img/收藏.png'></image>
+      <text>我的收藏</text>
+      <image class= "collection_right" src='/img/扩展.png'></image>
+    </view>
+
+  </view>
+  
+  <view class="myfriend">
+  
+    <view class='friend_name'>
+      <image class="friend_picture" src='/img/食友.png'></image>
+      <text>我的食友</text>
+      <image class= "friend_right" src='/img/扩展.png'></image>
+    </view>
+
+  </view>
+
+</view>

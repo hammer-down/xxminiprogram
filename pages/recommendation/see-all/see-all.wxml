@@ -1,0 +1,14 @@
+<import src="see-grid-template/see-grid-template.wxml" />
+
+<view class="placeholder"></view>
+
+<view class="container">
+
+  <view class="page_title">
+    <image bindtap="goBack" class="back" src="/img/back.png"></image>
+    <text class="info">{{categoryName}}</text>
+  </view>
+
+  <template is="seeGridTemplate" data="{{dishData}}"/>
+
+</view>

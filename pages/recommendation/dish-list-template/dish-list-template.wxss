@@ -1,0 +1,29 @@
+@import "../dish-template/dish-template.wxss";
+
+.box{
+ padding: 1em;
+ background: #ffffff;
+ margin-top: 1em;
+}
+.box .box-title{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.box .box-title text{
+  font-size: 16px;
+  
+}
+.see-all{
+  font-size: 10px;
+  color: #666666;
+}
+.see-all image{
+  width: 1em;
+  height: 1em;
+  vertical-align: middle;
+}
+.dish-list{
+  white-space: nowrap;
+}

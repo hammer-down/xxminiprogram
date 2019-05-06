@@ -1,0 +1,93 @@
+/* pages/dish-atlas/dish-atlas.wxss */
+@import "template/dish-template.wxss";
+
+/*容器布局*/
+.page{
+  background: #e8e8e8e8;
+}
+/**/
+.logo{
+  width: 4em;
+  height: 1em;
+  position: absolute;
+  left: 0;
+  top: 0.7em;
+}
+.title{
+  font-family: 微软雅黑;
+  width: 4em;
+  height: 2em;
+  position: absolute;
+  left: 2.5em;
+  top: 0.5em;
+}
+/*餐厅*/
+.area{
+   border-bottom: 1px solid #e8e8e8;
+   height: 3em;
+   background-color: #d8384d;
+}
+.select{
+  display: flex;
+}
+.select:first-child{
+   position: relative;
+   margin-left: 33.33%;
+}
+.select .restaurant .frame {
+  display: flex;
+  flex-direction: column;
+}
+.select .frame .restaurant  .img{
+  width: 1em;
+  height: 1em;
+  position: relative;
+  padding: 0.12em 0 0.12em 0.12em;
+}
+.select .frame .name{
+  font-size: 0.4em;
+  text-align: center;
+}
+.restaurant{
+  width: 46rpx;
+  height: 46rpx;
+  border-radius: 20%;
+  position: relative;
+  margin: 0.5em 1.3em 0 0;
+}
+/*楼层*/
+.area2{
+   border-bottom: 1px solid #e8e8e8;
+   height: 2rem;
+}
+.select2{
+  display: flex;
+}
+.select2 .floor_name{
+  width: 33.33%;
+  text-align: center;
+  line-height: 2.3em;
+  font-weight: bolder;
+  font-size: 0.8em;
+}
+
+/*选中效果：带边框*/
+.is_checked {
+    width: 48rpx;
+    height: 48rpx;
+    border: 2px solid;
+    border-color:   #71adec;
+    position: relative;
+    margin: 0.3em 1.3em 0 0em;
+}
+/*按钮颜色样式*/
+.color0 {
+    background-color:  #71adec;
+}
+.color1 {
+    background-color: #71adec;
+}
+.color2 {
+    background-color:  #71adec;
+}
+

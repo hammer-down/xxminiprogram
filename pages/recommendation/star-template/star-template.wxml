@@ -1,0 +1,15 @@
+<template name="starTemplate">
+  <view class="dish-star-content">
+    <view class="stars">
+      <!--<image src="/img/star1.png"></image>
+      <image src="/img/star1.png"></image>
+      <image src="/img/star1.png"></image>
+      <image src="/img/star1.png"></image>
+      <image src="/img/star1.png"></image>-->
+      <block wx:for="{{stars}}" wx:for-item="item" wx:key="key">
+          <image src="{{item ? '/img/star2.png' : '/img/star1.png'}}"></image>
+      </block>
+    </view>
+    <text class="star-score">{{dishScore}}</text>
+  </view>
+</template>

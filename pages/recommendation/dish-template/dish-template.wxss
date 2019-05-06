@@ -1,0 +1,21 @@
+@import "../star-template/star-template.wxss";
+
+.dish {
+  display: inline-block;
+  width: 170px;
+  margin: 0.7em 0.5em 0 0.5em;
+}
+.dish-content{
+  display: flex;
+  flex-direction: column;
+}
+.dish-content .dish-img{
+   width: 170px;
+   border-radius: 20px;
+}
+.dish-content text{
+  text-align: center;
+}
+.dish:first-child{
+  margin-left: 0;
+}

@@ -1,0 +1,15 @@
+.dish-star-content{
+  display: flex;
+  flex-direction: row;
+}
+.dish-star-content .stars image{
+   padding-left: 0.4em;
+   width: 1em;
+   height: 1em;
+} 
+.dish-star-content .stars .star-score{
+  font-size:12px;
+  color: #1f3463;
+  text-align: center;
+  padding-left:1em;
+}

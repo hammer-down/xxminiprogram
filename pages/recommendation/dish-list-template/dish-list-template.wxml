@@ -1,0 +1,21 @@
+<import src="../dish-template/dish-template.wxml" />
+
+<template name="dishListTemplate">
+  <view class="box">
+    <view class="box-title">
+      <text>{{categoryName}}</text>
+      <view catchtap = "dishSeeAll" class='see-all' data-categoryname="{{categoryName}}">
+        全部
+        <image src="/img/right.png"></image>
+      </view>
+    </view>
+    <view class="box-content">
+      <scroll-view class="dish-list" scroll-x="true">
+        <!--加载dish视图-->
+        <block wx:for="{{dishData}}" wx:for-item="item" wx:key="key">
+          <template is="dishTemplate" data="{{...item}}"/>
+        </block>
+      </scroll-view>
+    </view>
+  </view>
+</template>

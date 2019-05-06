@@ -1,0 +1,10 @@
+<import src="../star-template/star-template.wxml"/>
+  <template name="dishTemplate">
+    <view class="dish">
+      <view class="dish-content">
+        <image bindtap="goToDishDetail" data-dishid="{{dishid}}" class="dish-img" src="{{dishImgUrl}}"></image>
+        <text>{{dishName}}</text>
+      </view>
+      <template is="starTemplate" data="{{dishScore:dishScore,stars:stars}}"/>
+    </view>
+  </template>

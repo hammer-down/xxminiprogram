@@ -1,0 +1,34 @@
+<!--pages/register/register.wxml-->
+<view class="placeholder"></view>
+
+<view class="container">
+
+  <view class="page_title">
+    <image bindtap="goBack" class="back" src="/img/back.png"></image>
+    <view class='info'>
+      <text>注册</text>
+    </view>
+  </view>
+   <view class='table'>
+
+  </view>
+  <view class="inputView">
+    <!--这个是输入框-->
+    <view></view>
+    <input class="input" type="number" placeholder="请输入账号" placeholder-style="color: gray" bindinput="listenerPhoneInput" />
+  </view>
+  <view class="inputView">
+    <!--这个是输入框-->
+    <input class="input" type="number" placeholder="请输入账号" placeholder-style="color: gray" bindinput="listenerPhoneInput" />
+  </view>
+  <view class="inputView">
+    <!--这个是输入框-->
+    <input class="input" type="number" placeholder="请输入账号" placeholder-style="color: gray" bindinput="listenerPhoneInput" />
+  </view>
+  <view class="inputView">
+    <input class="input" password="true" placeholder="请输入密码" placeholder-style="color: gray" bindinput="listenerPasswordInput" />
+  </view>
+  <!--登录按钮-->
+  <button style="margin-left: 15rpx; margin-right: 15rpx; margin-top: 50rpx; border-radius: 40rpx" type="primary" bindtap="listenerLogin">注册</button>
+
+</view>

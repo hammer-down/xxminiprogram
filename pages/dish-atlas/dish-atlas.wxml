@@ -1,0 +1,50 @@
+<!--pages/dish-atlas/dish-atlas.wxml-->
+<import src="template/dish-template.wxml" />
+<view class="placeholder"></view>
+<view class="container">
+
+  <view class="page_title">
+    <image class='logo' src='/img/logo.png'></image>
+    <text class="title">小巷</text>
+  </view>
+
+<view class="area">
+  <view class='select'>
+    <view class='frame'>
+      <view class="restaurant color{{0}} {{restaurantIndex==0?'is_checked':'color{{0}}'}}"  bindtap="restaurantSelect" data-param='{{0}}'>
+        <image class="img" src="/img/玉兰.png"></image>
+      </view>
+      <view class="name" style="color:{{restaurantIndex==0?'#71adec':'#76eba7'}}" bindtap="test" data-param='{{0}}'>玉兰</view>
+    </view>
+    <view class='frame'>
+      <view class="restaurant color{{1}} {{restaurantIndex==1?'is_checked':'color{{1}}'}}" bindtap="restaurantSelect" data-param='{{1}}'>
+        <image class="img" src="/img/荟萃.png"></image>
+      </view>
+      <view class="name" style="color:{{restaurantIndex==1?'#71adec':'#76eba7'}}"  bindtap="test" data-param='{{1}}'>荟萃</view>
+    </view>
+    <view class='frame'>
+      <view class="restaurant color{{2}} {{restaurantIndex==2?'is_checked':'color{{2}}'}}" bindtap="restaurantSelect" data-param='{{2}}'>
+        <image class="img" src="/img/唐岛湾.png"></image>
+      </view>
+      <view class="name" style="color:{{restaurantIndex==2?'#71adec':'#76eba7'}}"  bindtap="test" data-param='{{2}}'>唐岛湾</view>
+    </view>
+  </view>
+</view>
+
+<view class="area2">
+  <view class='select2'>
+    <view class="floor_name" style="color:{{floorIndex==0?'#71adec':'#76eba7'}}" bindtap="floorSelect" data-param='{{0}}'>
+      <view style="border-bottom:{{floorIndex==0?'2px solid #71adec':''}}">壹楼</view>
+    </view>
+    <view class="floor_name" style="color:{{floorIndex==1?'#71adec':'#76eba7'}}" bindtap="floorSelect" data-param='{{1}}'>
+      <view style="border-bottom:{{floorIndex==1?'2px solid #71adec':''}}">贰楼</view>
+    </view>
+    <view class="floor_name" style="color:{{floorIndex==2?'#71adec':'#76eba7'}}" bindtap="floorSelect" data-param='{{2}}'>
+      <view style="border-bottom:{{floorIndex==2?'2px solid #71adec':''}}">叁楼</view>
+    </view>
+  </view>
+</view>
+
+
+<template is="dishTemplate" data="{{...dishData}}" />
+</view>
