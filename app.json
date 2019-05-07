@@ -16,7 +16,7 @@
   "tabBar": {
     "color": "#888",
     "selectedColor": "#09bb07",
-    "backgroundColor": "#000",
+    "backgroundColor": "#fff",
     "list": [
       {
         "pagePath": "pages/recommendation/index",

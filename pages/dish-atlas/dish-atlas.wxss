@@ -25,7 +25,7 @@
 .area{
    border-bottom: 1px solid #e8e8e8;
    height: 3em;
-   background-color: #346dd6;
+   background-color: #3d73d8;
 }
 .select{
   display: flex;
