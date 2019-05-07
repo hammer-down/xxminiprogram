@@ -22,39 +22,6 @@
   top: 0.8em;
 }
 /*餐厅*/
-.area{
-   border-bottom: 1px solid #e8e8e8;
-   height: 3em;
-   background-color: #3d73d8;
-}
-.select{
-  display: flex;
-}
-.select:first-child{
-   position: relative;
-   margin-left: 33.33%;
-}
-.select .restaurant .frame {
-  display: flex;
-  flex-direction: column;
-}
-.select .frame .restaurant  .img{
-  width: 1em;
-  height: 1em;
-  position: relative;
-  padding: 0.12em 0 0.12em 0.12em;
-}
-.select .frame .name{
-  font-size: 0.4em;
-  text-align: center;
-}
-.restaurant{
-  width: 46rpx;
-  height: 46rpx;
-  border-radius: 20%;
-  position: relative;
-  margin: 0.5em 1.3em 0 0;
-}
 /*楼层*/
 .area2{
    border-bottom: 1px solid #e8e8e8;
@@ -64,7 +31,7 @@
 .select2{
   display: flex;
 }
-.select2 .floor_name{
+.floor_name{
   width: 33.33%;
   text-align: center;
   line-height: 2.3em;
@@ -72,6 +39,27 @@
   font-size: 0.8em;
 }
 
+
+/*楼层*/
+.area3{
+   height: 3.5rem;
+   background-color: rgb(70, 123, 238);
+}
+.select3{
+  display: flex;
+}
+.select3:first-child{
+   position: relative;
+   margin-left: 25%;
+}
+.restaurant_name{
+  text-align: center;
+  line-height: 2.3em;
+  font-weight: bolder;
+  font-size: 1em;
+  padding-right: 2rem;
+  padding-top: 1em;
+}
 /*选中效果：带边框*/
 .is_checked {
     width: 48rpx;
@@ -89,6 +77,13 @@
     background-color: #71adec;
 }
 .color2 {
-    background-color:  #71adec;
+    background-color:  #f1f1f1;
+}
+/**/
+.font1{
+  font-size: 1em;
+}
+.font2{
+  font-size: 1.5em;
 }
 

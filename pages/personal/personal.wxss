@@ -19,87 +19,141 @@ page{
 }
 .personal{
   width: 100%;
-  height: 4em;
+  height: 5rem;
   overflow:hidden;
   margin-top:1em;
   padding-bottom: 0.8em;
   background: #ffffff;
   box-shadow: 2px 5px 50px #d1d1d1;
-  display: flex;
 }
-.personal .personal_img{
+
+.personal .summary{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  font-size: 1em;
+  position: relative;
+  padding-top: 1.5em;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+.personal_img{
   width: 3em;
   height: 3em;
   border-radius: 50%;
-  position: relative;
-  margin-top:0.6em;
-  margin-bottom: 0.6em;
-  margin-left: 2em;
 }
-.personal .summary{
+.name{
   display: flex;
+  flex-direction: row;
 }
-.personal .summary  .name{
+.name .nickname{
   position: relative;
-  margin-top: 1.5em;
-  margin-bottom: 1.5em;
-  margin-left: 2em;
+  padding-top: 1em;
+  padding-left: 1em;
 }
-.personal .summary  .state{
-  position: relative;
-  margin-left: 5em;
-  margin-top: 1.5em;
-  margin-bottom: 1.5em;
-  font-size: 1em;
+.state image{
+  width: 2em;
+  height: 2em;
 }
 /*我的收藏
 */
 .myCollection{
   border-bottom: 1px solid #e8e8e8;
-  height: 3em;
+  height: 3.5em;
   margin-top: 1em;
   background: #ffffff
 }
 .myCollection .collection_name{
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
   font-size: 1em;
-  padding: 0.8em 1em 0.5em 1em;
+  position: relative;
+  padding-top: 1.1em;
+  padding-left: 1em;
 }
-.myCollection .collection_name .collection_picture{
+.myCollection .collection_name .collection_picture image{
   width: 1em;
   height: 1em;
-  position: relative;
-  margin-top: 0.2em;
 }
-.myCollection .collection_name .collection_right{
+.myCollection .collection_name .collection_right image{
   width: 1.3em;
   height: 1em;
-  position: relative;
-  margin-top: 0.2em;
-  margin-left: 11.3em;
 }
 /**/
 .myfriend{
   border-bottom: 1px solid #e8e8e8;
-  height: 3em;
+  height: 3.5em;
   margin-top: 0;
   background: #ffffff
 }
 .myfriend .friend_name{
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
   font-size: 1em;
-  padding: 0.8em 1em 0.5em 1em;
+  position: relative;
+  padding-top: 1.1em;
+  padding-left: 1em;
 }
-.myfriend .friend_name .friend_picture{
+.friend_picture image{
   width: 1em;
   height: 1em;
-  position: relative;
-  margin-top: 0.2em;
 }
-.myfriend .friend_name .friend_right{
+.friend_right image{
   width: 1.3em;
   height: 1em;
+}
+/**/
+.feedback{
+  border-bottom: 1px solid #e8e8e8;
+  height: 3.5em;
+  margin-top: 1rem;
+  background: #ffffff
+}
+.feedback .feedback_name{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  font-size: 1em;
   position: relative;
-  margin-top: 0.2em;
-  margin-left: 11.3em;
+  padding-top: 1.1em;
+  padding-left: 1em;
+}
+.feedback_picture image{
+  width: 1em;
+  height: 1em;
+}
+.feedback_right image{
+  width: 1.3em;
+  height: 1em;
+}
+/**/
+.set-up{
+  border-bottom: 1px solid #e8e8e8;
+  height: 3.5em;
+  margin-top: 0;
+  background: #ffffff
+}
+.set-up .set-up_name{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  font-size: 1em;
+  position: relative;
+  padding-top: 1.1em;
+  padding-left: 1em;
+}
+.set-up_picture image{
+  width: 1em;
+  height: 1em;
+}
+.set-up_right image{
+  width: 1.3em;
+  height: 1em;
 }

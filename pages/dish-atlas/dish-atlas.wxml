@@ -8,25 +8,16 @@
     <text class="title">小巷</text>
   </view>
 
-<view class="area">
-  <view class='select'>
-    <view class='frame'>
-      <view class="restaurant color{{0}} {{restaurantIndex==0?'is_checked':'color{{0}}'}}"  bindtap="restaurantSelect" data-param='{{0}}'>
-        <image class="img" src="/img/玉兰.png"></image>
-      </view>
-      <view class="name" style="color:{{restaurantIndex==0?'#71adec':'#76eba7'}}" bindtap="test" data-param='{{0}}'>玉兰</view>
+<view class="area3">
+  <view class='select3'>
+    <view class="restaurant_name " style="color:{{restaurantIndex==0?'#fff':'#e8e8e8'}}"  bindtap="restaurantSelect" data-param='{{0}}'>
+      <view class="f font1 {{restaurantIndex==0?'font2':'font1'}}">玉兰</view>
     </view>
-    <view class='frame'>
-      <view class="restaurant color{{1}} {{restaurantIndex==1?'is_checked':'color{{1}}'}}" bindtap="restaurantSelect" data-param='{{1}}'>
-        <image class="img" src="/img/荟萃.png"></image>
-      </view>
-      <view class="name" style="color:{{restaurantIndex==1?'#71adec':'#76eba7'}}"  bindtap="test" data-param='{{1}}'>荟萃</view>
+    <view class="restaurant_name" style="color:{{restaurantIndex==1?'#fff':'#e8e8e8'}}" bindtap="restaurantSelect" data-param='{{1}}'>
+      <view class=" font1 {{restaurantIndex==1?'font2':'font1'}}" >荟萃</view>
     </view>
-    <view class='frame'>
-      <view class="restaurant color{{2}} {{restaurantIndex==2?'is_checked':'color{{2}}'}}" bindtap="restaurantSelect" data-param='{{2}}'>
-        <image class="img" src="/img/唐岛湾.png"></image>
-      </view>
-      <view class="name" style="color:{{restaurantIndex==2?'#71adec':'#76eba7'}}"  bindtap="test" data-param='{{2}}'>唐岛湾</view>
+    <view class="restaurant_name" style="color:{{restaurantIndex==2?'#fff':'#e8e8e8'}}" bindtap="restaurantSelect" data-param='{{2}}'>
+      <view class=" font1 {{restaurantIndex==2?'font2':'font1'}}">唐岛湾</view>
     </view>
   </view>
 </view>
@@ -44,6 +35,7 @@
     </view>
   </view>
 </view>
+
 
 
 <template is="dishTemplate" data="{{...dishData}}" />
