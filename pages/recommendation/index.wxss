@@ -4,19 +4,19 @@ page{
    background: #e8e8e8e8;
 }
 .logo{
-  width: 4em;
-  height: 1em;
+  width: 1.5em;
+  height: 1.5em;
   position: absolute;
-  left: 0;
-  top: 0.7em;
+  left: 1em;
+  top: 0.8em;
 }
 .title{
   font-family: 微软雅黑;
   width: 4em;
   height: 2em;
   position: absolute;
-  left: 2.5em;
-  top: 0.5em;
+  left: 2em;
+  top: 0.8em;
 }
 /*轮播图设置*/
 .lunbor{
@@ -47,7 +47,7 @@ page{
 .searview {
   position: relative;
   padding-right: 130rpx;
-  border: 1px solid #e0e0e0;
+  border: 1px solid orange;
   border-right: 0;
   border-radius: 10rpx;
   box-sizing: border-box;
@@ -56,7 +56,7 @@ page{
 }
  
 .shasbg {
-  padding: 0 40rpx;
+  padding: 28rpx 40rpx 10rpx 40rpx;
 }
  
 .searview button {

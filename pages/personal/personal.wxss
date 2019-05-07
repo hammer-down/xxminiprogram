@@ -3,19 +3,19 @@ page{
    background: #e8e8e8e8;
 }
 .logo{
-  width: 4em;
-  height: 1em;
+  width: 1.5em;
+  height: 1.5em;
   position: absolute;
-  left: 0;
-  top: 0.7em;
+  left: 1em;
+  top: 0.8em;
 }
 .title{
   font-family: 微软雅黑;
   width: 4em;
   height: 2em;
   position: absolute;
-  left: 2.5em;
-  top: 0.5em;
+  left: 2em;
+  top: 0.8em;
 }
 .personal{
   width: 100%;

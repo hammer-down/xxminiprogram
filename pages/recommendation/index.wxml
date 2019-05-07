@@ -36,5 +36,5 @@
   <!---->
   <template is="dishListTemplate" data="{{...popular}}" />
   <template is="dishListTemplate" data="{{...love}}" />
-
+  
 </view>

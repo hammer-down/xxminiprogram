@@ -1,7 +1,7 @@
 var dishData = [
 {
   "dishid": 0,
-  "dishImgUrl": "/img/菜品1.jpg",
+    "dishImgUrl": "https://gss0.bdstatic.com/94o3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike80%2C5%2C5%2C80%2C26/sign=03185e533412b31bd361c57be7715d1f/0df431adcbef76093ba35b8b23dda3cc7cd99e7e.jpg",
   "dishName": "糖醋排骨",
   "dsihPrice": "10",
   "dishDescription": "糖醋排骨可以说是永远经典的一道菜。无论大人孩子都会对它爱不适口。一般做法都是油炸过再糖醋，我喜欢煮过再糖醋，自己感觉这样不会油腻，口感更好，而且更健康一些。",
@@ -13,7 +13,7 @@ var dishData = [
 },
 {
   "dishid": 1,
-  "dishImgUrl": "/img/菜品2.jpg",
+  "dishImgUrl": "https://6473-dsg1-45aa1a-1258808456.tcb.qcloud.la/%E8%8F%9C%E5%93%812.jpg",
   "dishName": "麻辣烤鸡",
   "dsihPrice": "10",
   "dishDescription": "糖醋排骨可以说是永远经典的一道菜。无论大人孩子都会对它爱不适口。一般做法都是油炸过再糖醋，我喜欢煮过再糖醋，自己感觉这样不会油腻，口感更好，而且更健康一些。",
@@ -25,7 +25,7 @@ var dishData = [
 },
 {
   "dishid": 2,
-  "dishImgUrl": "/img/菜品3.jpg",
+  "dishImgUrl": "https://6473-dsg1-45aa1a-1258808456.tcb.qcloud.la/%E8%8F%9C%E5%93%813.jpg",
   "dishName": "香辣鱿鱼",
   "dsihPrice": "10",
   "dishDescription": "糖醋排骨可以说是永远经典的一道菜。无论大人孩子都会对它爱不适口。一般做法都是油炸过再糖醋，我喜欢煮过再糖醋，自己感觉这样不会油腻，口感更好，而且更健康一些。",
@@ -37,7 +37,7 @@ var dishData = [
 },
 {
   "dishid": 3,
-  "dishImgUrl": "/img/菜品4.jpg",
+  "dishImgUrl": "https://6473-dsg1-45aa1a-1258808456.tcb.qcloud.la/%E8%8F%9C%E5%93%814.jpg",
   "dishName": "糖醋里脊",
   "dsihPrice": "10",
   "dishDescription": "糖醋排骨可以说是永远经典的一道菜。无论大人孩子都会对它爱不适口。一般做法都是油炸过再糖醋，我喜欢煮过再糖醋，自己感觉这样不会油腻，口感更好，而且更健康一些。",
@@ -49,7 +49,7 @@ var dishData = [
 },
 {
   "dishid": 4,
-  "dishImgUrl": "/img/菜品5.jpg",
+  "dishImgUrl": "https://6473-dsg1-45aa1a-1258808456.tcb.qcloud.la/%E8%8F%9C%E5%93%815.jpg",
   "dishName": "冻香猪蹄",
   "dsihPrice": "10",
   "dishDescription": "糖醋排骨可以说是永远经典的一道菜。无论大人孩子都会对它爱不适口。一般做法都是油炸过再糖醋，我喜欢煮过再糖醋，自己感觉这样不会油腻，口感更好，而且更健康一些。",
