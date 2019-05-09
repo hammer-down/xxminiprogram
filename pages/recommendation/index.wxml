@@ -1,6 +1,6 @@
 <!--index.wxml-->
 <import src="dish-list-template/dish-list-template.wxml" />
-
+<!--logo栏-->
 <view class="placeholder"></view>
 
 <view class="container">
@@ -9,7 +9,7 @@
     <image class='logo' src='/img/logo.png'></image>
     <text class="title">小巷</text>
   </view>
-
+  
   <view class='shasbg'>
     <view class='searview'>
       <icon class='icon-search'></icon>

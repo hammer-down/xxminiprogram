@@ -1,54 +1,74 @@
 /* pages/new_course/index.wxss */
+@import "similar-template/similar-template.wxss";
 page{
   background: #e8e8e8e8;
 }
 .second-tab {
   display: flex;
   flex-direction: row;
-  height: 2em;
+  height: 2.5em;
   box-shadow: 0px 0px 3px #e8e8e8;
   background: #ffffff;
+  position: fixed;
+  width: 100%;
+  z-index: 99;
+  left: 0;
+  top:4em;
 }
 .second-tab > view{
   width: 50%;
   text-align: center;
   line-height: 2.3em;
+  padding-top: 0.25em
 }
-.second-tab > view.active{
-   border-bottom: 3px solid #ffc12b;
+/**/
+.detail{
+  height: 100%;
+  width: 100%;
+  margin-top: 6.5em;
+  background-color: #e8e8e8;
 }
 /**/
 .head-img{
   width:100%;
 }
 /**/
+.summary{
+  background: #ffffff;
+  border: 1px solid #d1d1d1;
+  margin: 0 auto;
+  transform: translateY(-30px);
+  width: 80%;
+  height: 2.5em;
+  border-radius: 20px;
+}
 .price{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-end;
-  background: #ffffff;
-  border: 1px solid #d1d1d1;
-  margin: 0 auto;
-  transform: translateY(-30px);
+  position: relative;
+  padding-top: 0.5em;
+  padding-left: 1em;
+  padding-right: 1em;
 }
 .price text{
   font-size: 1em;
-  padding: 0.3em 0 0 0;
-  color: #12da5ee8;
+  color: #0b77f3e8;
 }
-.price .act-btn{
+.summary .act-btn{
   display: flex;
 }
-.price .act-btn image{
+.summary .act-btn image{
   position: relative;
   width: 1em;
   height: 1em;
 }
-.price .act-btn .share{
-  position: relative;
+.summary .act-btn .share{
   font-size: 0.7em;
-  padding-bottom: 1em;
+  position: relative;
+  padding-top: 0em;
+  padding-right: 1em;
 }
 /**/
 .dish-description{
@@ -66,7 +86,7 @@ page{
 } 
 /**/
 .restaurant{
-  height: 1.5em;
+  height: 2em;
   overflow:hidden;
   margin: 0 auto;
   margin-top:0.5em;
@@ -78,24 +98,55 @@ page{
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  padding: 0.3em 1em 0 1em;
+  position: relative;
+  padding-top: 0.7em;
+  padding-left: 1em;
+  padding-right: 1em;
 }
 .restaurant .pos text{
   font-size: 0.9em;
 }
-/**/
-.foot{
-  height: 1.25em;
+.people-comment{
+  height: 3.5em;
   overflow:hidden;
   margin: 0 auto;
   margin-top:0.5em;
   padding-bottom: 0.8em;
   background: #ffffff;
   box-shadow: 2px 5px 50px #d1d1d1;
+  font-size: 0.7em;
+}
+/**/
+.recommended{
+  overflow:hidden;
+  margin: 0 auto;
+  margin-top:0.5em;
+  padding-bottom: 0.8em;
+  background: #ffffff;
+  box-shadow: 2px 5px 50px #d1d1d1;
+  font-size: 1em;
+}
+.recommended .name{
+  position: relative;
+  padding-left: 1em;
+  height: 1.5em;
+  border-bottom:1px solid #e8e8e8;
+}
+/**/
+.foot{
+  height: 6em;
+  overflow:hidden;
+  margin: 0 auto;
+  margin-top:0.5em;
+  padding-bottom: 0.8em;
+  background: #ffffff;
+  box-shadow: 2px 5px 50px #d1d1d1;
+  font-size: 0.7em;
+  text-align: center;
 }
 /*菜品详情页的脚页*/
 .dish-detail-footer{
-  height: 2em;
+  height: 3em;
   border-top: 1px solid #e8e8e8;
   width: 100%;
   position: fixed;
@@ -112,14 +163,14 @@ page{
 .dish-detail-footer .btn .business{
   display: flex;
   flex-direction: column;
-  padding: 0.3em 0 0 1em;
+  padding: 0.7em 0 0 1em;
 }
 .dish-detail-footer .btn .business image{
     width: 1em;
     height: 1em;
 }
 .dish-detail-footer .btn .business text{
-  font-size: 0.4em;
+  font-size: 0.6em;
   text-align: center;
 }
 .dish-detail-footer .btn .reserve{
@@ -134,13 +185,12 @@ page{
 .dish-detail-footer .btn .collection{
   display: flex;
   flex-direction: column;
-  padding: 0.3em 1em 0 0;
+  padding: 0.7em 1em 0 0;
 }
 .dish-detail-footer .btn .collection image{
     width: 1em;
     height: 1em;
 }
 .dish-detail-footer .btn .collection text{
-  font-size: 0.4em;
-  text-align: center;
+  font-size: 0.6em;
 }

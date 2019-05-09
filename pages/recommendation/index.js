@@ -17,7 +17,7 @@ Page({
     popular: [],
     love: [],
     autoFocus: true,
-    keyWord: ''
+    keyWord: '',
   },
   //事件处理函数
   bindViewTap: function() {
@@ -27,6 +27,7 @@ Page({
   },
   //生命周期函数--监听页面加载
   onLoad: function() {
+    
     this.setData(utils.callback(popularData.popularData, "popular", "最近最热"));
     this.setData(utils.callback(loveData.loveData, "love", "食友最爱"));
     //this.setData可以将view重绘
@@ -40,7 +41,6 @@ Page({
       key: 'popular',
       data: popularData,
     })
-
     //获取缓存
     this.getCache(this.processCache);
     var populars = "http://localhost:8080/food";
@@ -65,33 +65,10 @@ Page({
       console.log("2")
     }
   },
-  /*callback: function (res, category,categoryName){
-    var dishData = [];
-     //遍历传入数据
-    for (var idx in res.dishData){
-       //获取传入中的一条数据
-      var loveData = res.dishData[idx];
-       var temp = {
-         dishid: loveData.dishid,
-         dishImgUrl: loveData.dishImgUrl,
-         dishName: loveData.dishName,
-         stars: utils.convertToStarArray(loveData.dishStars),
-         dishScore: loveData.dishScore,
-       }
-       dishData.push(temp);
-       //转换类型
-       var readyData = {};
-       readyData[category] = {
-         categoryName: categoryName,
-         dishData: dishData
-       }
-     }
-    this.setData(readyData);
-  },*/
   goToDishDetail: function(event) {
     var dishId = event.currentTarget.dataset.dishid;
     wx.navigateTo({
-      url: '/pages/dish_detail/index?dishid=' + dishId,
+      url: '/pages/dish_detail/dish_detail?dishid=' + dishId,
     })
   },
   dishSeeAll: function(event) {
@@ -113,8 +90,9 @@ Page({
     })
   },
   callback: function(res) {
-    var foodData = [];
-    for (var idx in res) {}
+    this.setData({
+      d:res
+    })
   },
   //input框失焦
   blursearch: function (event) {
@@ -124,7 +102,7 @@ Page({
   },
   //input框聚焦
   inputfocus: function (e) {
-  
+    
   },
   //联想
   inputsearch: function (event) {

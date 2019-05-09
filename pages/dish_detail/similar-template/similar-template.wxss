@@ -1,0 +1,17 @@
+.similar{
+  height: 4em;
+  overflow: hidden;
+  background: #ffffff;
+  font-size: 1em;
+  border-bottom:1px solid #e8e8e8;
+  position: relative;
+  padding-top:0.5em;
+  padding-left: 1em;
+}
+.similar image{
+  width: 4em;
+  height: 4em;
+}
+.similar .summary2{
+ 
+}

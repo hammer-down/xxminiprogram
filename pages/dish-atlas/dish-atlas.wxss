@@ -21,29 +21,22 @@
   left: 2em;
   top: 0.8em;
 }
+.lan{
+  height: 100%;
+  width: 100%;
+  margin-top: 9.5em;
+  background-color: #e8e8e8;
+}
+
 /*餐厅*/
-/*楼层*/
-.area2{
-   border-bottom: 1px solid #e8e8e8;
-   height: 2rem;
-   background-color: #fff;
-}
-.select2{
-  display: flex;
-}
-.floor_name{
-  width: 33.33%;
-  text-align: center;
-  line-height: 2.3em;
-  font-weight: bolder;
-  font-size: 0.8em;
-}
-
-
-/*楼层*/
 .area3{
    height: 3.5rem;
-   background-color: rgb(70, 123, 238);
+   background-color: rgb(233, 72, 32);
+   position: fixed;
+   width: 100%;
+   z-index: 99;
+   left: 0;
+   top:4em;
 }
 .select3{
   display: flex;
@@ -60,6 +53,29 @@
   padding-right: 2rem;
   padding-top: 1em;
 }
+/*楼层*/
+.area2{
+   border-bottom: 1px solid #e8e8e8;
+   height: 2rem;
+   background-color: #fff;
+   position: fixed;
+   width: 100%;
+   z-index: 99;
+   left: 0;
+   top:7.5em;
+}
+.select2{
+  display: flex;
+}
+.floor_name{
+  width: 33.33%;
+  text-align: center;
+  line-height: 2.3em;
+  font-weight: bolder;
+  font-size: 0.8em;
+}
+
+
 /*选中效果：带边框*/
 .is_checked {
     width: 48rpx;

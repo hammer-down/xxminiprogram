@@ -1,26 +1,31 @@
 // pages/new_course/index.js
 //获取数据
-var popularData = require("../data/popularData.js");
-var loveData = require("../data/loveData.js");
+var dishData = require("../data/dishData.js");
 
 Page({
 
   /**
    * 页面的初始数据
    */
-  data: {},
+  data: {
+    btn:0,
+    detail:1,
+    comment:0,
+  },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
     //options是页面初始化带来的页面参数
-    this.setData(popularData.popularData.dishData[options.dishid]);
-    this.setData(loveData.loveData.dishData[options.dishid]);
     this.setData({
-      dishid: options.dishid
+      dishid: options.dishid,
+      dishData:dishData.dishData
     })
-
+   
+    //传入数据
+    this.dishDetail(options.dishid,dishData);
+    
     //第一进入的时候判断是否存在本地以及是否收藏
     var dishesCollect = wx.getStorageSync('dishesCollect');
     //如果dishesCollect 存在，则代表以前收藏过或者以前取消过收藏
@@ -38,7 +43,25 @@ Page({
       wx.setStorageSync('dishesCollect', dishesCollect);
     }
   },
-  
+  /** */
+  select: function (e) {
+    let curIndex = parseInt(e.currentTarget.dataset.param);
+    this.setData({
+      btn: curIndex
+    });
+    if (curIndex==0){
+      this.setData({
+        detail:1,
+        comment:0
+      })
+    }
+    else if (curIndex==1){
+      this.setData({
+        detail: 0,
+        comment: 1
+      })
+    }
+  },
   /**
    * 收藏
    * 格式
@@ -62,7 +85,6 @@ Page({
     this.setData({
       collected: dishCollect
     })
-
     //收藏成功与否消息显示框
     wx.showToast({
       title: dishesCollect[this.data.dishid] ? '收藏成功' : '取消收藏',
@@ -71,7 +93,16 @@ Page({
       mask: true
     })
   },
-
+  /**
+   * 处理详细菜品数据
+   */
+  dishDetail:function(dishid,disData){
+    for (var idx in dishData.dishData){
+      if (dishData.dishData[idx].dishid==dishid){
+        this.setData(dishData.dishData[idx])
+      }
+    }
+  },
   /**
    * 返回函数
    */
@@ -81,5 +112,7 @@ Page({
       delta: id
     })
   },
-
+  onShow:function(){
+   
+  }
 })

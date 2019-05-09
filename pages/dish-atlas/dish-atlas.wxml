@@ -1,6 +1,8 @@
 <!--pages/dish-atlas/dish-atlas.wxml-->
 <import src="template/dish-template.wxml" />
+<!--logo栏-->
 <view class="placeholder"></view>
+<!--选项栏-->
 <view class="container">
 
   <view class="page_title">
@@ -8,35 +10,38 @@
     <text class="title">小巷</text>
   </view>
 
-<view class="area3">
-  <view class='select3'>
-    <view class="restaurant_name " style="color:{{restaurantIndex==0?'#fff':'#e8e8e8'}}"  bindtap="restaurantSelect" data-param='{{0}}'>
-      <view class="f font1 {{restaurantIndex==0?'font2':'font1'}}">玉兰</view>
-    </view>
-    <view class="restaurant_name" style="color:{{restaurantIndex==1?'#fff':'#e8e8e8'}}" bindtap="restaurantSelect" data-param='{{1}}'>
-      <view class=" font1 {{restaurantIndex==1?'font2':'font1'}}" >荟萃</view>
-    </view>
-    <view class="restaurant_name" style="color:{{restaurantIndex==2?'#fff':'#e8e8e8'}}" bindtap="restaurantSelect" data-param='{{2}}'>
-      <view class=" font1 {{restaurantIndex==2?'font2':'font1'}}">唐岛湾</view>
-    </view>
-  </view>
-</view>
-
-<view class="area2">
-  <view class='select2'>
-    <view class="floor_name" style="color:{{floorIndex==0?'#71adec':'#76eba7'}}" bindtap="floorSelect" data-param='{{0}}'>
-      <view style="border-bottom:{{floorIndex==0?'2px solid #71adec':''}}">壹楼</view>
-    </view>
-    <view class="floor_name" style="color:{{floorIndex==1?'#71adec':'#76eba7'}}" bindtap="floorSelect" data-param='{{1}}'>
-      <view style="border-bottom:{{floorIndex==1?'2px solid #71adec':''}}">贰楼</view>
-    </view>
-    <view class="floor_name" style="color:{{floorIndex==2?'#71adec':'#76eba7'}}" bindtap="floorSelect" data-param='{{2}}'>
-      <view style="border-bottom:{{floorIndex==2?'2px solid #71adec':''}}">叁楼</view>
+  <view class="area3">
+    <view class='select3'>
+      <view class="restaurant_name " style="color:{{restaurantIndex==0?'#fff':'#e8e8e8'}}" bindtap="restaurantSelect" data-param='{{0}}'>
+        <view class="f font1 {{restaurantIndex==0?'font2':'font1'}}">玉兰</view>
+      </view>
+      <view class="restaurant_name" style="color:{{restaurantIndex==1?'#fff':'#e8e8e8'}}" bindtap="restaurantSelect" data-param='{{1}}'>
+        <view class=" font1 {{restaurantIndex==1?'font2':'font1'}}">荟萃</view>
+      </view>
+      <view class="restaurant_name" style="color:{{restaurantIndex==2?'#fff':'#e8e8e8'}}" bindtap="restaurantSelect" data-param='{{2}}'>
+        <view class=" font1 {{restaurantIndex==2?'font2':'font1'}}">唐岛湾</view>
+      </view>
     </view>
   </view>
+
+  <view class="area2">
+    <view class='select2'>
+      <view class="floor_name" style="color:{{floorIndex==0?'#71adec':'#76eba7'}}" bindtap="floorSelect" data-param='{{0}}'>
+        <view style="border-bottom:{{floorIndex==0?'2px solid #71adec':''}}">壹楼</view>
+      </view>
+      <view class="floor_name" style="color:{{floorIndex==1?'#71adec':'#76eba7'}}" bindtap="floorSelect" data-param='{{1}}'>
+        <view style="border-bottom:{{floorIndex==1?'2px solid #71adec':''}}">贰楼</view>
+      </view>
+      <view class="floor_name" style="color:{{floorIndex==2?'#71adec':'#76eba7'}}" bindtap="floorSelect" data-param='{{2}}'>
+        <view style="border-bottom:{{floorIndex==2?'2px solid #71adec':''}}">叁楼</view>
+      </view>
+    </view>
+  </view>
+
 </view>
+<!--菜单栏-->
+<view class='lan'>
 
+  <template is="dishTemplate" data="{{...dishData}}" />
 
-
-<template is="dishTemplate" data="{{...dishData}}" />
 </view>

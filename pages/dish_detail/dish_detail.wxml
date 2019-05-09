@@ -1,0 +1,115 @@
+<!--pages/new_course/index.wxml-->
+<import src="../recommendation/star-template/star-template.wxml"/>
+<import src="similar-template/similar-template.wxml"/>
+
+<view class="placeholder"></view>
+<view class='container'>
+
+  <view class="page_title">
+    <image bindtap="goBack" class="back" src="/img/back.png"></image>
+    <text class="info">{{dishName}}</text>
+  </view>
+  <view class="second-tab">
+    <view class="active" style="border-bottom:{{btn==0?'3px solid #ffc12b':''}}" bindtap="select" data-param='{{0}}'>详情</view>
+    <view class="comment" style="border-bottom:{{btn==1?'3px solid #ffc12b':''}}" bindtap="select" data-param='{{1}}'>评论</view>
+  </view>
+
+</view>
+
+<view class='select' wx:if="{{detail}}">
+
+  <view class='detail'>
+    <image class="head-img" src="{{dishImgUrl}}"></image>
+
+    <view class="summary">
+      <view class='price'>
+        <text>¥{{dsihPrice}}</text>
+        <view class="act-btn" catchtap=''>
+          <image src="/img/分享.png"></image>
+          <view class="share">
+            <text>分享</text>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <view class="dish-description">
+      <text class='title'>菜品描述：</text>
+      <text class='description'>{{dishDescription}}</text>
+    </view>
+
+    <view class='restaurant'>
+      <view class='pos'>
+        <text>餐厅</text>
+        <text>{{dishRestaurant}}</text>
+      </view>
+    </view>
+
+    <view class='restaurant'>
+      <view class='pos'>
+        <text>楼层</text>
+        <text>{{dishFloot}}</text>
+      </view>
+    </view>
+
+    <view class='restaurant'>
+      <view class='pos'>
+        <text>窗口</text>
+        <text>{{dishWindow}}号窗口</text>
+      </view>
+    </view>
+  </view>
+
+  <view class='recommended'>
+    <view class='name'>
+      猜你喜欢
+    </view>
+
+    <template is="similarTemplate" data="{{dishData}}" />
+    
+  </view>
+
+  <view class='foot'>
+    --无更多--
+  </view>
+
+  <view class="dish-detail-footer">
+    <view class='btn'>
+      <view class='business'>
+        <image src="/img/商家.png"></image>
+        <text>商家</text>
+      </view>
+      <view catchtap='reserveTap' class='reserve'> 预订 </view>
+      <view class='collection' wx:if="{{collected}}" catchtap="collectTap">
+        <image src="/img/收藏.png"></image>
+        <text>收藏</text>
+      </view>
+      <view class='collection' wx:else catchtap="collectTap">
+        <image src="/img/未收藏.png"></image>
+        <text>收藏</text>
+      </view>
+    </view>
+
+  </view>
+
+</view>
+<view class='select' wx:if="{{comment}}">
+  
+  <view class='detail'>
+    <image class="head-img" src="{{dishImgUrl}}"></image>
+    <view class='star'>
+      <template is="starTemplate" data="{{dishScore:dishScore,stars:stars}}"/>
+    </view>
+    <view class="people-comment"> 炒锅里放汁的时候放不放油</view>
+    <view class="people-comment"> 炒锅里放汁的时候放不放油</view>
+    <view class="people-comment"> 炒锅里放汁的时候放不放油</view>
+    <view class='foot'>
+    --无更多--
+    </view>
+  </view>
+  
+  <view class="dish-detail-footer">
+    
+  </view>
+
+</view>

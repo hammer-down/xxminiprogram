@@ -18,7 +18,6 @@ Page({
     restaurantIndex: 0,
     floorIndex: 0,
     data_color: [],
-    test:0,
   },
 
   /**
@@ -58,13 +57,6 @@ Page({
     });
     this.globalData.floorIndex = curIndex;
     this.dishView(this.globalData.restaurantIndex, this.globalData.floorIndex);
-  },
-  /** */
-  test:function(e){
-    let curIndex = parseInt(e.currentTarget.dataset.param);
-    this.setData({
-      test: curIndex
-    });
   },
   /**
    * 数据映射

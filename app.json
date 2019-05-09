@@ -4,7 +4,7 @@
     "pages/dish-atlas/dish-atlas",
     "pages/personal/personal",
     "pages/logs/logs",
-    "pages/dish_detail/index",
+    "pages/dish_detail/dish_detail",
     "pages/course_detail/index",
     "pages/recommendation/see-all/see-all",
     "pages/login/login",

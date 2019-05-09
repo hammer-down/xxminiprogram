@@ -20,7 +20,7 @@ page{
 /******通用页头*******/
 .page_title {
   text-align: center;
-  border-bottom: 1px solid #346dd6;
+  border-bottom: 1px solid #f80404;
   height: 3em;
   position:relative;
   background: #ffffff;
@@ -29,7 +29,7 @@ page{
   z-index: 999;
   left:0;
   top:1.5em;
-  background-color: #346dd6;
+  background-color: #f80404;
 }
 .page_title .back{
   width: 1.5em;
