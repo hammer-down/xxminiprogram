@@ -1,0 +1,6 @@
+/* pages/search/search.wxss */
+@import "item-template/item-template.wxss";
+.search{
+  margin-top:4.6em;
+}
+

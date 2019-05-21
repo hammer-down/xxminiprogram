@@ -31,16 +31,15 @@ page{
   color: rgb(12, 233, 23);
   
 }
-.container .lunbor swiper-item .activity-info .title{
+.container .lunbor swiper-item .activity-info {
   position: absolute;
-  bottom: 4em;
-  padding: 0em 0em 4em 0em; 
-  font-size: 0.8em;
+  bottom: 2em;
+  padding: 0 1em 0em 1em;
 }
-.container .lunbor swiper-item .activity-info .date{
-  position: absolute;
-  bottom: 4em;
-  padding: 0em 0em 4em 10em; 
+.container .lunbor swiper-item .activity-info .activity-title{
+   font-size: 0.8em;
+}
+.container .lunbor swiper-item .activity-info .activity-description{
   font-size: 0.8em;
 }
 /*搜索*/

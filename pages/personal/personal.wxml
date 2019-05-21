@@ -7,18 +7,24 @@
     <image class='logo' src='/img/logo.png'></image>
     <text class="title">小巷</text>
   </view>
-  
+
   <view class='personal'>
 
     <view class='summary'>
       <view class='name'>
         <image class="personal_img" src="/img/头像.jpg"></image>
         <view class='nickname'>
-          <text>昵称</text>
+          <view wx:if='{{user.show}}'>{{user.uNickname}}</view>
+          <view wx:else>昵称</view>
         </view>
       </view>
-      <view class="state" bindtap='logintap'>
-        <image src="/img/未登录.png"></image>
+      <view>
+        <view wx:if='{{user.show}}' class="state">
+          <image></image>
+        </view>
+        <view wx:else class="state" bindtap='logintap'>
+          <image src="/img/未登录.png"></image>
+        </view>
       </view>
     </view>
 
@@ -27,53 +33,53 @@
   <view class="myCollection">
 
     <view class='collection_name'>
-      <view class="collection_picture" >
-        <image  src='/img/收藏.png'></image>
+      <view class="collection_picture">
+        <image src='/img/收藏.png'></image>
         <text>我的收藏</text>
       </view>
-      <view class= "collection_right" >
+      <view class="collection_right">
         <image src='/img/扩展.png'></image>
       </view>
     </view>
 
   </view>
-  
+
   <view class="myfriend">
-  
+
     <view class='friend_name'>
-      <view class="friend_picture" >
-        <image  src='/img/食友.png'></image>
+      <view class="friend_picture">
+        <image src='/img/食友.png'></image>
         <text>我的食友</text>
       </view>
-      <view class= "friend_right" >
+      <view class="friend_right">
         <image src='/img/扩展.png'></image>
       </view>
     </view>
 
   </view>
-  
- <view class="feedback">
-  
+
+  <view class="feedback">
+
     <view class='feedback_name'>
-      <view class="feedback_picture" >
-        <image  src='/img/客户服务.png'></image>
+      <view class="feedback_picture">
+        <image src='/img/客户服务.png'></image>
         <text>帮助反馈</text>
       </view>
-      <view class= "feedback_right" >
+      <view class="feedback_right">
         <image src='/img/扩展.png'></image>
       </view>
     </view>
 
   </view>
- 
+
   <view class="set-up">
-  
+
     <view class='set-up_name'>
-      <view class="set-up_picture" >
-        <image  src='/img/设置.png'></image>
+      <view class="set-up_picture">
+        <image src='/img/设置.png'></image>
         <text>设置</text>
       </view>
-      <view class= "set-up_right" >
+      <view class="set-up_right">
         <image src='/img/扩展.png'></image>
       </view>
     </view>

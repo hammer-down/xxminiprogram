@@ -1,5 +1,5 @@
 // pages/recommendation/see-all/see-all.js
-var utils = require("../../util/utils.js");
+var tools = require("../../util/tools.js");
 
 Page({
 
@@ -17,37 +17,48 @@ Page({
     this.setData({
       categoryName: options.categoryname,
     })
+    //var allUrl = "";
+    var key = "";
     switch (options.categoryname){
       case "最近最热":
-        this.callback(utils.getData(options.categoryname).popularData)
+       // allUrl = "http://localhost:8080/hotdish";
+        key='popular';
         break;
-      case "食友最爱":
-        this.callback(utils.getData(options.categoryname).loveData)
+      case "猜你喜欢":
+       // allUrl = "http://localhost:8080/hotdish";
+        key = 'love';
         break;
     }
-    
+    //网络请求数据
+    //tools.http(allUrl,this.callback);
+    tools.getCache(key,this.cacheHand)
   },
-  callback: function (res) {
-    var dishData = [];
-    //遍历传入数据
-    for (var idx in res.dishData) {
-      //获取传入中的一条数据
-      var loveData = res.dishData[idx];
-      var temp = {
-        dishid: loveData.dishid,
-        dishImgUrl: loveData.dishImgUrl,
-        dishName: loveData.dishName,
-        stars: utils.convertToStarArray(loveData.dishStars),
-        dishScore: loveData.dishScore,
-      }
-      dishData.push(temp);
-      //转换类型
-    }
-    console.log(dishData)
+  //处理缓存
+  cacheHand:function(cache){
     this.setData({
-      dishData:dishData
+      dishdata: cache.dishdata
     })
   },
+  /*callback: function (res) {
+    var dishdata = [];
+    //遍历传入数据
+    for (var idx in res.dishdata) {
+      //获取传入中的一条数据
+      var oneData = res.dishdata[idx];
+      var temp = {
+        fId: oneData.fId,
+        fUrl: oneData.fUrl,
+        fName: oneData.fName,
+        fPrice: oneData.fPrice,
+        fStars: tools.convertToStarArray(oneData.fAllrating),
+        fScore: oneData.fAllrating,
+      }
+      dishdata.push(temp);
+    }
+    this.setData({
+      dishdata:dishdata
+    })
+  },*/
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
@@ -106,7 +117,7 @@ Page({
   goToDishDetail: function (event) {
     var dishId = event.currentTarget.dataset.dishid;
     wx.navigateTo({
-      url: '/pages/dish_detail/index?dishid=' + dishId,
+      url: '/pages/dish_detail/index?dishid=' + dishId + '&categoryname='+this.data.categoryName,
     })
   },
 })

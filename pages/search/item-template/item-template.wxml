@@ -1,0 +1,31 @@
+<template name="itemTemplate">
+  <block wx:for="{{dishData}}" wx:key="1">
+    <view class='searchItem'>
+      <view class='fImg'>
+        <view class="loadImg loadImg{{index}} {{item.show? 'active' : ''}}">
+          <image wx:if='{{item.show}}' style='width:100%;height:100%' src='{{item.fUrl}}'></image>
+          <image wx:else style='width:20%;height:20%;margin:0 auto;margin-top:50%;transform:translateY(-50%);' src='{{item.def}}' mode='aspectFit'></image>
+        </view>
+      </view>
+      <view class='item'>
+        <view class='fName'>
+          <text>【{{item.fName}}】</text>
+        </view>
+        <view class='fPrice'>
+          <text>¥{{item.fPrice}}/份</text>
+        </view>
+        <view class='f-place'>
+          <view wx:if='{{item.rf}}'>{{item.wRestaurant}}</view><view wx:if='{{item.rf}}'>{{item.wFloor}}楼</view><view>{{item.fWid}}号窗口></view>
+          <view class='stars'>
+            <image src="/img/star2.png"></image>
+            <image src="/img/star2.png"></image>
+            <image src="/img/star2.png"></image>
+            <image src="/img/star2.png"></image>
+            <image src="/img/star2.png"></image>
+            <view>5.0</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </block>
+</template>

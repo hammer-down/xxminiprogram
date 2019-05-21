@@ -1,7 +1,7 @@
 <template name="similarTemplate">
 
- <block wx:for="{{dishData}}" wx:for-item="item" wx:key="key">
-    <view class='similar'>
+ <!--<block wx:for="{{dishData}}" wx:for-item="item" wx:key="key">
+    <view class='similar' data-dishid="{{item.dishid}}">
       <image bindtap="goToDishDetail" class="dish_img" src="{{item.dishImgUrl}}"></image>
       <view class='summary2'>
         <view class='dishdes'>
@@ -15,5 +15,32 @@
       </view>
     </view>
   </block>
+ -->
+ <scroll-view class='search' scroll-top="{{scrollTop}}"  scroll-y="true" style="height:{{scrollHeight}}px;" bindscrolltolower="bindDownLoad" bindscroll="scroll">
+  <view wx:for="{{dishData}}" wx:key="key" class='searchItem'>
+    <view class="fImg">
+      <image src="{{item.fUrlCount}}"></image>
+    </view>
+    <view class='item'>
+      <view class='fName'>
+        <text>【{{item.fName}}】</text>
+      </view>
+      <view class='fPrice'>
+        <text>¥{{item.fPrice}}/份</text>
+      </view>
+      <view class='f-place'>
+        <text>{{item.wRestaurant}}{{item.wFloor}}楼 {{item.fWid}}号窗口></text>
+        <view class='stars'>
+          <image src="/img/star2.png"></image>
+          <image src="/img/star2.png"></image>
+          <image src="/img/star2.png"></image>
+          <image src="/img/star2.png"></image>
+          <image src="/img/star2.png"></image>
+          <view>5.0</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</scroll-view>
 
 </template>

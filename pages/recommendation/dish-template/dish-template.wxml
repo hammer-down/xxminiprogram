@@ -2,9 +2,9 @@
   <template name="dishTemplate">
     <view class="dish">
       <view class="dish-content">
-        <image bindtap="goToDishDetail" data-dishid="{{dishid}}" class="dish-img" src="{{dishImgUrl}}"></image>
-        <text>{{dishName}}</text>
+        <image bindtap="goToDishDetail" data-fid="{{fId}}" data-categoryname="{{categoryName}}" class="dish-img" src="{{fUrl}}"></image>
+        <text>{{fName}}</text>
       </view>
-      <template is="starTemplate" data="{{dishScore:dishScore,stars:stars}}"/>
+      <template is="starTemplate" data="{{fScore:fScore,fStars:fStars}}"/>
     </view>
   </template>

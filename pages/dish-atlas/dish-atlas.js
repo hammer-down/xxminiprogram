@@ -2,13 +2,13 @@
 const app = getApp();
 var yyData = require("../data/yyData.js");
 var yeData = require("../data/yeData.js");
-var ysData = require("../data/ysData.js");
 var hyData = require("../data/hyData.js");
 var heData = require("../data/heData.js");
 var hsData = require("../data/hsData.js");
 var tyData = require("../data/tyData.js");
 var teData = require("../data/teData.js");
 var tsData = require("../data/tsData.js");
+var tools = require("../util/tools.js");
 
 Page({
   /**
@@ -17,22 +17,23 @@ Page({
   data: {
     restaurantIndex: 0,
     floorIndex: 0,
-    data_color: [],
+    imgCount: 0,
+    totalCount: 5,
+    scrollTop: 0,
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-    let init_color = [
-      '#71adec',
-      '#71adec',
-      '#71adec'
-    ]
-    this.setData({
-      data_color: init_color,
-    })
     this.dishView(this.globalData.restaurantIndex, this.globalData.floorIndex);
+    var url = app.globalData.urlHeader +'/list'
+    tools.http(url,this.callback)
+  },
+  callback:function(res){
+    this.setData({
+      dishdata:res.dishdata
+    })
   },
   /**
    * 餐厅选择
@@ -76,8 +77,10 @@ Page({
           break;
         case 2:
           this.setData({
-            dishData: ysData.ysData
+            dishData: this.data.dishdata
           })
+          tools.handleData(this);
+          tools.loadImage(this);
           break;
       }
     } else if (r == 1) {
@@ -169,5 +172,11 @@ Page({
   globalData: {
     restaurantIndex: 0,
     floorIndex: 0
+  },
+  goToDishDetail: function (event) {
+    var dishId = event.currentTarget.dataset.dishid;
+    wx.navigateTo({
+      url: '/pages/dish_detail/dish_detail?dishid=' + dishId,
+    })
   }
 })

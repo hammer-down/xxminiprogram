@@ -5,10 +5,11 @@
     "pages/personal/personal",
     "pages/logs/logs",
     "pages/dish_detail/dish_detail",
-    "pages/course_detail/index",
     "pages/recommendation/see-all/see-all",
     "pages/login/login",
-    "pages/register/register"
+    "pages/register/register",
+    "pages/search/search",
+    "pages/test/test"
   ],
   "window": {
     "navigationStyle": "custom"

@@ -1,6 +1,8 @@
 // pages/new_course/index.js
 //获取数据
 var dishData = require("../data/dishData.js");
+var tools = require("../util/tools.js");
+const app = getApp()
 
 Page({
 
@@ -8,24 +10,34 @@ Page({
    * 页面的初始数据
    */
   data: {
-    btn:0,
-    detail:1,
-    comment:0,
+    btn: 0,
+    detail: 1,
+    comment: 0,
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
+    tools.getHeight(this)
     //options是页面初始化带来的页面参数
     this.setData({
       dishid: options.dishid,
-      dishData:dishData.dishData
+      dishData: dishData.dishData
     })
-   
+    if (options.categoryname == '最近最热') {
+      tools.getCache('popularData', this.cacheHand)
+    } else if (options.categoryname == '猜你喜欢') {
+      tools.getCache('loveData', this.cacheHand)
+    }
+    tools.workData(this);
+    tools.loadImage(this);
+    //网络请求地址
+     
+    //网络请求
+     tools.http();
     //传入数据
-    this.dishDetail(options.dishid,dishData);
-    
+
     //第一进入的时候判断是否存在本地以及是否收藏
     var dishesCollect = wx.getStorageSync('dishesCollect');
     //如果dishesCollect 存在，则代表以前收藏过或者以前取消过收藏
@@ -44,18 +56,17 @@ Page({
     }
   },
   /** */
-  select: function (e) {
+  select: function(e) {
     let curIndex = parseInt(e.currentTarget.dataset.param);
     this.setData({
       btn: curIndex
     });
-    if (curIndex==0){
+    if (curIndex == 0) {
       this.setData({
-        detail:1,
-        comment:0
+        detail: 1,
+        comment: 0
       })
-    }
-    else if (curIndex==1){
+    } else if (curIndex == 1) {
       this.setData({
         detail: 0,
         comment: 1
@@ -96,10 +107,18 @@ Page({
   /**
    * 处理详细菜品数据
    */
-  dishDetail:function(dishid,disData){
-    for (var idx in dishData.dishData){
-      if (dishData.dishData[idx].dishid==dishid){
-        this.setData(dishData.dishData[idx])
+  dishDetail: function(dishid) {
+
+  },
+  //处理缓存
+  cacheHand: function(cache) {
+    if (cache == '0') {
+
+    } else {
+      for (var idx in cache.dishdata) {
+        if (this.data.dishid == cache.dishdata[idx].fId) {
+          this.setData(cache.dishdata[idx])
+        }
       }
     }
   },
@@ -112,7 +131,14 @@ Page({
       delta: id
     })
   },
-  onShow:function(){
-   
+  onShow: function() {
+
+  },
+  //跳转详情页
+  goToDishDetail: function(event) {
+    var dishId = event.currentTarget.dataset.dishid;
+    wx.navigateTo({
+      url: '/pages/dish_detail/dish_detail?dishid=' + dishId,
+    })
   }
 })

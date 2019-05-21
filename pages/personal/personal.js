@@ -12,8 +12,28 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+   
   },
+  //获取用户数据
+  getUserData: function (handleUser){
+     wx.getStorage({
+       key: 'user',
+       success: function(res) {
+         handleUser(res.data)
+       },
+     })
+  },
+  //处理用户数据
+  handleUser:function(res){
+    if(res){
+     this.setData({
+       user:res
+     })
+    }else{
+
+    }
+  },
+  //未登录跳转登陆页面
   logintap:function(){
      wx.navigateTo({
        url: '/pages/login/login',
@@ -30,7 +50,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    this.getUserData(this.handleUser);
   },
 
   /**

@@ -17,24 +17,28 @@
         <input type='text' placeholder="搜索您关心的美食" value='{{keyWord}}' confirm-type='search' focus="{{autoFocus}}" bindconfirm='goSearch' bindblur="blursearch" bindinput='inputsearch' bindfocus="inputfocus"></input>
         <icon class='icon-cancel' bindtap='cancelword' wx:if='{{keyWord}}'></icon>
       </view>
-      <button bindtap='searchBtn'>搜索</button>
+      <button bindtap='searchBtn' data-foodKeyWord='{{keyWord}}'>搜索</button>
     </view>
   </view>
 
   <swiper class="lunbor" autoplay='true' indicator-dots='true' indicator-color='#888'>
-    <block wx:for="{{swiperData}}" wx:key="key">
-      <swiper-item>
-        <image src="{{item.swiperImgUrls}}"></image>
+    <block wx:for="{{discountfood.discountFood}}" wx:key="key">
+      <swiper-item bindtap="goToDishDetail" data-fid="{{item.fId}}">
+        <image src="{{item.fUrl}}"></image>
         <view class="activity-info">
-          <text class="title">{{item.swiperActInfo}}</text>
-          <text class='date'>{{item.swiperActDate}}</text>
+          <view class="activity-title">
+            <text >【{{item.fName}}】</text>
+          </view>
+          <view class='activity-description'>
+            <text >{{item.fAdescription}}</text>
+          </view>
         </view>
       </swiper-item>
     </block>
   </swiper>
 
   <!---->
-  <template is="dishListTemplate" data="{{...popular}}" />
-  <template is="dishListTemplate" data="{{...love}}" />
-  
+    <template is="dishListTemplate" data="{{...popular}}" />
+    <template is="dishListTemplate" data="{{...love}}" />
+    
 </view>

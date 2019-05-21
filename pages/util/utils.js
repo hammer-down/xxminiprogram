@@ -1,6 +1,4 @@
 //星星的数据拆分
-var popularData = require("../data/popularData.js");
-var loveData = require("../data/loveData.js");
 
 function convertToStarArray(stars) {
   //num代表拆分的数值
@@ -15,22 +13,6 @@ function convertToStarArray(stars) {
     }
   }
   return starsArray;
-}
-//请求数据
-function getData(res) {
-  var dishData ={};
-  if (res == "最近最热") {
-     dishData = {
-      popularData: popularData.popularData,
-    }
-  }else if(res== "食友最爱")
-  {
-    dishData = {
-      loveData: loveData.loveData,
-    }
-  }
-
-  return dishData;
 }
 
 //返回数据

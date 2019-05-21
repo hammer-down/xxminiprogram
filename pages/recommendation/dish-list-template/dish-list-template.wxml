@@ -12,8 +12,8 @@
     <view class="box-content">
       <scroll-view class="dish-list" scroll-x="true">
         <!--加载dish视图-->
-        <block wx:for="{{dishData}}" wx:for-item="item" wx:key="key">
-          <template is="dishTemplate" data="{{...item}}"/>
+        <block wx:for="{{dishdata}}" wx:for-item="item" wx:key="key">
+          <template is="dishTemplate" data="{{...item,categoryName:categoryName}}"/>
         </block>
       </scroll-view>
     </view>

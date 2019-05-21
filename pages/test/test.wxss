@@ -1,40 +1,21 @@
-/*.similar{
-  height: 4em;
-  overflow: hidden;
-  background: #ffffff;
-  font-size: 1em;
-  border-bottom:1px solid #e8e8e8;
-  display: flex;
-  position: relative;
-  padding-top:0.5em;
-  padding-left: 1em;
-}
-.similar image{
-  width: 4em;
-  height: 4em;
-}*/
-.search{
-}
-::-webkit-scrollbar{
-  width: 0;
-  height: 0;
-  color: transparent;
-}
+/* pages/test/test.wxss */
 .searchItem{
   display: flex;
   height: 15vh;
   border-bottom: 1px solid #e8e8e8e8;
-  
 }
-.fImg{
+.loadImg{
   display: flex;
   margin-left: 2vw;
   align-items: center;
   justify-items: center;
-}
-.fImg image{
   height: 13vh;
-  width: 16vh
+  width: 16vh;
+  transition: all .2s ease-in-out;
+  opacity: 0;
+}
+.loadImg.active{
+  opacity: 1
 }
 .item{
   display: flex;
@@ -68,5 +49,3 @@
    width: 3vw;
    height: 3vw;
 }
-
-

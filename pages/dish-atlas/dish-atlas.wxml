@@ -42,6 +42,6 @@
 <!--菜单栏-->
 <view class='lan'>
 
-  <template is="dishTemplate" data="{{...dishData}}" />
+  <template is="dishTemplate" data="{{dishData:dishData}}" />
 
 </view>

@@ -1,39 +1,39 @@
 <!--pages/login/login.wxml-->
 <view class="placeholder"></view>
 
-<view class="container">
+<view class="container" style='height: {{scrollHeight}}px'>
 
   <view class="page_title">
     <image bindtap="goBack" class="back" src="/img/back.png"></image>
     <view class='info'>
-    <text>登陆</text>
+      <text>登陆</text>
     </view>
   </view>
- 
- <!--style的优先级比class高会覆盖和class相同属性-->
-<!--头像-->
-<view style="display:flex;justify-content: center;">
-    <image  style="width:130rpx;height:130rpx;border-radius:50%;margin-top:10%;" src="/img/头像.jpg"> </image>
-</view>
-<!--这个是输入框背景-->
-<view class="inputView">
+
+  <!--style的优先级比class高会覆盖和class相同属性-->
+  <!--头像-->
+  <view style="display:flex;justify-content: center;">
+    <image style="width:130rpx;height:130rpx;border-radius:50%;margin-top:10%;" src="/img/头像.jpg"> </image>
+  </view>
+  <!--这个是输入框背景-->
+  <view class="inputView">
     <!--这个是输入框-->
-    <input class="input"  type="number" placeholder="请输入账号" placeholder-style="color: gray" bindinput="listenerPhoneInput" />
-</view>
-<view class="inputView">
-    <input class="input" password="true" placeholder="请输入密码" placeholder-style="color: gray" bindinput="listenerPasswordInput"/>
-</view>
-<!--登录按钮-->
-<button style="margin-left: 15rpx; margin-right: 15rpx; margin-top: 50rpx; border-radius: 40rpx" type="primary" bindtap="http">登录</button>
+    <input class="input" type="number" placeholder="请输入账号" value='{{loginName}}' focus="{{autoFocus}}" bindblur="blurName" placeholder-style="color: gray" bindinput="listenerPhoneInput" bindfocus="inputNamefocus" />
+  </view>
+  <view class="inputView">
+    <input class="input" password="true" placeholder="请输入密码" value='{{loginPassword}}' focus="{{autoFocus}}" bindblur="blurPassword" placeholder-style="color: gray" bindinput="listenerPasswordInput" bindfocus="inputPasswordfocus" />
+  </view>
+  <!--登录按钮-->
+  <button style="margin-left: 15rpx; margin-right: 15rpx; margin-top: 50rpx; border-radius: 40rpx" type="primary" bindtap="loginTap">登录</button>
 
-<view class='buttom'>
-<view class="forgetPassword">
-  忘记密码？
-</view>
+  <view class='buttom' >
+    <view class="forgetPassword">
+      忘记密码？
+    </view>
 
-<view class='register' bindtap='goToRegiter'>
-  注册用户
-</view>
-</view>
+    <view class='register' bindtap='goToRegiter'>
+      注册用户
+    </view>
+  </view>
 
 </view>

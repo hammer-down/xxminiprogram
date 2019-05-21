@@ -9,6 +9,6 @@
     <text class="info">{{categoryName}}</text>
   </view>
 
-  <template is="seeGridTemplate" data="{{dishData}}"/>
+  <template is="seeGridTemplate" data="{{dishdata}}"/>
 
 </view>

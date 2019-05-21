@@ -2,10 +2,10 @@
 App({
   onLaunch: function () {
     // 展示本地存储能力
-    var logs = wx.getStorageSync('logs') || []
+    /*var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
-    wx.setStorageSync('logs', logs)
-
+    wx.setStorageSync('logs', logs)*/
+    
     // 登录
     wx.login({
       success: res => {
@@ -36,6 +36,8 @@ App({
   globalData: {
     userInfo: null,
     restaurantIndex:0,
-    floorIndex:0
+    floorIndex:0,
+    urlHeader:'http://localhost:8080'
+    //http://39.106.5.52:8080
   }
 })

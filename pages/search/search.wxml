@@ -1,0 +1,20 @@
+<!--pages/search/search.wxml-->
+<import src="item-template/item-template.wxml" />
+<view class="placeholder"></view>
+
+<view class="container">
+
+  <view class="page_title">
+    <image bindtap="goBack" class="back" src="/img/back.png"></image>
+    <text class="info">搜索结果</text>
+  </view>
+</view>
+
+<!--
+<scroll-view class='search' scroll-top="{{scrollTop}}" scroll-y="true" style="height:{{scrollHeight}}px;" bindscrolltolower="bindDownLoad" bindscroll="scroll">
+  <template is="itemTemplate" data="{{dishData:dishData}}" />
+</scroll-view>
+-->
+<view class='search'>
+  <template is="itemTemplate" data="{{dishData:dishData}}" />
+</view>

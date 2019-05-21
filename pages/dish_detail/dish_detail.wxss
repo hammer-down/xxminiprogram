@@ -1,5 +1,5 @@
 /* pages/new_course/index.wxss */
-@import "similar-template/similar-template.wxss";
+@import "../search/item-template/item-template.wxss";
 page{
   background: #e8e8e8e8;
 }
@@ -84,15 +84,17 @@ page{
     font-size: 0.7em;
     color: #e2b856;
 } 
-/**/
+/*菜品地址*/
+.dish-place{
+  margin-top:0.5em;
+}
 .restaurant{
   height: 2em;
   overflow:hidden;
   margin: 0 auto;
-  margin-top:0.5em;
   padding-bottom: 0.8em;
   background: #ffffff;
-  box-shadow: 2px 5px 50px #d1d1d1;
+  border-bottom: 1px solid #e8e8e8;
 }
 .restaurant .pos{
   display: flex;
@@ -113,7 +115,7 @@ page{
   margin-top:0.5em;
   padding-bottom: 0.8em;
   background: #ffffff;
-  box-shadow: 2px 5px 50px #d1d1d1;
+  border-bottom:1px solid #e8e8e8;
   font-size: 0.7em;
 }
 /**/
@@ -123,7 +125,7 @@ page{
   margin-top:0.5em;
   padding-bottom: 0.8em;
   background: #ffffff;
-  box-shadow: 2px 5px 50px #d1d1d1;
+  border-bottom:1px solid #e8e8e8;
   font-size: 1em;
 }
 .recommended .name{
@@ -140,9 +142,9 @@ page{
   margin-top:0.5em;
   padding-bottom: 0.8em;
   background: #ffffff;
-  box-shadow: 2px 5px 50px #d1d1d1;
   font-size: 0.7em;
   text-align: center;
+  background-color: #e8e8e8e8;
 }
 /*菜品详情页的脚页*/
 .dish-detail-footer{
@@ -193,4 +195,11 @@ page{
 }
 .dish-detail-footer .btn .collection text{
   font-size: 0.6em;
+}
+.search{
+}
+::-webkit-scrollbar{
+  width: 0;
+  height: 0;
+  color: transparent;
 }
