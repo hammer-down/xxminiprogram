@@ -106,6 +106,7 @@ function handleData(t) {
     dishData: that.data.dishData
   })
 }
+
 module.exports = {
   convertToStarArray: convertToStarArray,
   http:http,

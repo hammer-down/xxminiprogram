@@ -1,0 +1,5 @@
+/* pages/personal/set-up/set-up.wxss */
+@import "../option-template/option-template.wxss";
+.item{
+  margin-top: 4.5em;
+}

@@ -72,7 +72,7 @@
 
   </view>
 
-  <view class="set-up">
+  <view class="set-up" bindtap='setUpTap'>
 
     <view class='set-up_name'>
       <view class="set-up_picture">

@@ -1,0 +1,19 @@
+.option{
+  border-bottom: 1px solid #e8e8e8;
+  height: 3.5em;
+  background: #ffffff
+}
+.option .option-item{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  font-size: 1em;
+  position: relative;
+  padding-top: 1.1em;
+  padding-left: 1em;
+}
+.option-right image{
+  width: 1.3em;
+  height: 1em;
+}

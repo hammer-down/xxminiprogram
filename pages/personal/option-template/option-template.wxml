@@ -1,0 +1,15 @@
+<template name='optionTemplate'>
+   <view class='option'>
+  
+    <view class='option-item'>
+      <view class="option-name">
+        <text>{{name}}</text>
+      </view>
+      <view class="option-right">
+        <image src='/img/扩展.png'></image>
+      </view>
+    </view>
+
+   </view>
+
+</template>
