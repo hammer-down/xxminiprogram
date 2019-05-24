@@ -7,39 +7,22 @@ Wechat mini program of Xiaoxiang project.
 ## 4.构建各子页面的功能模块
 ## 5.每个模块对应一个后台出来的json数据 
 对象名：dishData；
-
 图片url：fUrl；
-
 菜名:fName；
-
 价格：fPrice；
-
 描述:fDescription；
-
 菜评分:fAllrating；
-
 菜星数:fStars；
-
 菜楼层:wfloor；
-
 菜的id:fId；
-
 菜餐厅：wRestaurant；
-
 菜的窗口:fWid；
-
 菜的热度：fHot；
-
 对象名：user；
-
 用户名：userName；
-
 用户密码:userPassword；
-
 用户昵称：nickName；
-
 身份码：token；
-
 用户邮箱：userEmail
 
 ## 6.加入缓存，推荐按页，主页为静态页面的后台json数据写入缓存,
